@@ -1,0 +1,21 @@
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\bin\Debug\WindformApp.exe.config
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\bin\Debug\WindformApp.exe
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\bin\Debug\WindformApp.pdb
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\obj\Debug\WindformApp.csproj.AssemblyReference.cache
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\obj\Debug\WindformApp.FrmPokemons.resources
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\obj\Debug\WindformApp.Properties.Resources.resources
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\obj\Debug\WindformApp.csproj.GenerateResource.cache
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\obj\Debug\WindformApp.csproj.CoreCompileInputs.cache
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\obj\Debug\WindformApp.exe
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Pokemon_App\WindformApp\WindformApp\obj\Debug\WindformApp.pdb
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\bin\Debug\WindformApp.exe.config
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\bin\Debug\WindformApp.exe
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\bin\Debug\WindformApp.pdb
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\obj\Debug\WindformApp.csproj.AssemblyReference.cache
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\obj\Debug\WindformApp.exe.config
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\obj\Debug\WindformApp.FrmPokemons.resources
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\obj\Debug\WindformApp.Properties.Resources.resources
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\obj\Debug\WindformApp.csproj.GenerateResource.cache
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\obj\Debug\WindformApp.csproj.CoreCompileInputs.cache
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\obj\Debug\WindformApp.exe
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\Nueva carpeta\WindformApp\WindformApp\obj\Debug\WindformApp.pdb
