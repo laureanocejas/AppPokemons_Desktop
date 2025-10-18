@@ -24,7 +24,9 @@ namespace WindformApp
             // dgvPokemons.DataSource = negocio.Listar();
 
             listaPokemons = negocio.Listar();
-            dgvPokemons.DataSource = listaPokemons; 
+            dgvPokemons.DataSource = listaPokemons;
+            dgvPokemons.Columns["UrlImagen"].Visible = false;
+            cargarImagen(listaPokemons[0].UrlImagen);
 
         }
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace WindformApp
             Pokemons seleccionado=(Pokemons)dgvPokemons.CurrentRow.DataBoundItem;
             //pbxPokemon.Load(seleccionado.UrlImagen); esto me tira una excepcion si la columna esta vacia de url y no tiene imagen
             cargarImagen(seleccionado.UrlImagen);
+
         }
 
 
