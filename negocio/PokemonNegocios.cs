@@ -58,6 +58,21 @@ public class PokemonNegocios
     }
         public void agregar(Pokemons nuevo)
         {
+            AccesoDatos datos=new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Insert into POKEMONS(Numero,Nombre,Descripcion,Activo)values("+nuevo.Numero +", '"+nuevo.Nombre+"','"+nuevo.Descripcion+"',1)");
+                datos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
         }
 

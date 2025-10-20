@@ -53,6 +53,10 @@ namespace WindformApp
             }
         }
 
-       
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaPokemons alta=new frmAltaPokemons();
+            alta.ShowDialog();
+        }
     }
 }

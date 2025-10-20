@@ -35,3 +35,4 @@ C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\App_Pokemons\
 C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\App_Pokemons\WindformApp\WindformApp\obj\Debug\Windform.40F7DC68.Up2Date
 C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\App_Pokemons\WindformApp\WindformApp\bin\Debug\negocio.dll
 C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\App_Pokemons\WindformApp\WindformApp\bin\Debug\negocio.pdb
+C:\Users\Laureano\OneDrive\Documentos\Curso C# Nivel2\ConexionesBD\App_Pokemons\WindformApp\WindformApp\obj\Debug\WindformApp.frmAltaPokemons.resources
