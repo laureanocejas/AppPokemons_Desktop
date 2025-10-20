@@ -55,9 +55,16 @@ public class PokemonNegocios
 
             throw ex;
         }
-
-
     }
+        public void agregar(Pokemons nuevo)
+        {
+
+        }
+
+        public void modificar(Pokemons modificar)
+        {
+
+        }
 
     }
 }
