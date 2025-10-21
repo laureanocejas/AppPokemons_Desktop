@@ -25,10 +25,19 @@ namespace WindformApp
             PokemonNegocios negocio=new PokemonNegocios();
             // dgvPokemons.DataSource = negocio.Listar();
 
-            listaPokemons = negocio.Listar();
-            dgvPokemons.DataSource = listaPokemons;
-            dgvPokemons.Columns["UrlImagen"].Visible = false;
-            cargarImagen(listaPokemons[0].UrlImagen);
+            
+            try
+            {
+                listaPokemons = negocio.Listar();
+                dgvPokemons.DataSource = listaPokemons;
+                dgvPokemons.Columns["UrlImagen"].Visible = false;
+                cargarImagen(listaPokemons[0].UrlImagen);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
 
         }
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
