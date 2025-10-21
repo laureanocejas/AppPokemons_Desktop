@@ -22,10 +22,22 @@ namespace WindformApp
 
         private void FrmPokemons_Load(object sender, EventArgs e)
         {
-            PokemonNegocios negocio=new PokemonNegocios();
+            cargar();
+        }
+        private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
+        {
+            Pokemons seleccionado = (Pokemons)dgvPokemons.CurrentRow.DataBoundItem;
+            //pbxPokemon.Load(seleccionado.UrlImagen); esto me tira una excepcion si la columna esta vacia de url y no tiene imagen
+            cargarImagen(seleccionado.UrlImagen);
+
+        }
+
+        private void cargar()
+        {
+            PokemonNegocios negocio = new PokemonNegocios();
             // dgvPokemons.DataSource = negocio.Listar();
 
-            
+
             try
             {
                 listaPokemons = negocio.Listar();
@@ -40,15 +52,7 @@ namespace WindformApp
             }
 
         }
-        private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
-        {
-            Pokemons seleccionado=(Pokemons)dgvPokemons.CurrentRow.DataBoundItem;
-            //pbxPokemon.Load(seleccionado.UrlImagen); esto me tira una excepcion si la columna esta vacia de url y no tiene imagen
-            cargarImagen(seleccionado.UrlImagen);
-
-        }
-
-
+ 
         private void cargarImagen(string imagen)
         {
             try
@@ -66,6 +70,7 @@ namespace WindformApp
         {
             frmAltaPokemons alta=new frmAltaPokemons();
             alta.ShowDialog();
+            cargar();
         }
     }
 }
