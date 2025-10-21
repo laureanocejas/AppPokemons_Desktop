@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\pokemonnegocios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|solutionrelative:negocio\\pokemonnegocios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\dominio\\elemento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|solutionrelative:dominio\\elemento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\windformapp\\frmpokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|solutionrelative:windformapp\\frmpokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\elementonegocios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|solutionrelative:negocio\\elementonegocios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|c:\\users\\laureano\\onedrive\\documentos\\curso c# nivel2\\conexionesbd\\app_pokemons\\windformapp\\windformapp\\frmaltapokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|solutionrelative:windformapp\\frmaltapokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,32 +31,12 @@
       "RelativeMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|solutionrelative:windformapp\\frmaltapokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\elementonegocios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|solutionrelative:negocio\\elementonegocios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\windformapp\\frmpokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|solutionrelative:windformapp\\frmpokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\pokemonnegocios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|solutionrelative:negocio\\pokemonnegocios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD9EEE00-DD81-4984-BD1C-CDD8B6C3D47E}|negocio\\negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\dominio\\pokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|solutionrelative:dominio\\pokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\windformapp\\frmpokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{858F7B32-F919-4BBB-9254-A5299BE4A56B}|WindformApp\\WindformApp.csproj|solutionrelative:windformapp\\frmpokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\dominio\\elemento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|solutionrelative:dominio\\elemento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\dominio\\pokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|solutionrelative:dominio\\pokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4EC8AA2-1550-4215-819B-8C91D5CAA221}|dominio\\dominio.csproj|C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\dominio\\entrenador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,55 +50,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "frmAltaPokemons.cs",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\WindformApp\\frmAltaPokemons.cs",
               "RelativeDocumentMoniker": "WindformApp\\frmAltaPokemons.cs",
               "ToolTip": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\WindformApp\\frmAltaPokemons.cs",
               "RelativeToolTip": "WindformApp\\frmAltaPokemons.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA5wCcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA6wCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T21:13:48.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "frmAltaPokemons.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\WindformApp\\frmAltaPokemons.cs",
               "RelativeDocumentMoniker": "WindformApp\\frmAltaPokemons.cs",
               "ToolTip": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\WindformApp\\frmAltaPokemons.cs [Design]",
               "RelativeToolTip": "WindformApp\\frmAltaPokemons.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T21:04:00.16Z"
+              "WhenOpened": "2025-10-20T21:04:00.16Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "AccesoDatos.cs",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\AccesoDatos.cs",
               "RelativeDocumentMoniker": "negocio\\AccesoDatos.cs",
               "ToolTip": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\AccesoDatos.cs",
               "RelativeToolTip": "negocio\\AccesoDatos.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwDsAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwEIAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T15:24:47.523Z"
+              "WhenOpened": "2025-10-20T15:24:47.523Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ElementoNegocios.cs",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\ElementoNegocios.cs",
               "RelativeDocumentMoniker": "negocio\\ElementoNegocios.cs",
               "ToolTip": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\ElementoNegocios.cs",
               "RelativeToolTip": "negocio\\ElementoNegocios.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBsAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T13:54:13.877Z"
+              "WhenOpened": "2025-10-20T13:54:13.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -114,43 +117,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "PokemonNegocios.cs",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\PokemonNegocios.cs",
               "RelativeDocumentMoniker": "negocio\\PokemonNegocios.cs",
               "ToolTip": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\negocio\\PokemonNegocios.cs",
               "RelativeToolTip": "negocio\\PokemonNegocios.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAgwEAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAQwDcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T13:36:10.49Z"
+              "WhenOpened": "2025-10-20T13:36:10.49Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "FrmPokemons.cs",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\WindformApp\\FrmPokemons.cs",
               "RelativeDocumentMoniker": "WindformApp\\FrmPokemons.cs",
               "ToolTip": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\WindformApp\\FrmPokemons.cs",
               "RelativeToolTip": "WindformApp\\FrmPokemons.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAowDoAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwDoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T12:33:31.451Z"
+              "WhenOpened": "2025-10-20T12:33:31.451Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Pokemons.cs",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\dominio\\Pokemons.cs",
               "RelativeDocumentMoniker": "dominio\\Pokemons.cs",
               "ToolTip": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\dominio\\Pokemons.cs",
               "RelativeToolTip": "dominio\\Pokemons.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T12:26:27.274Z"
+              "WhenOpened": "2025-10-20T12:26:27.274Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Elemento.cs",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\dominio\\Elemento.cs",
               "RelativeDocumentMoniker": "dominio\\Elemento.cs",
@@ -158,18 +164,20 @@
               "RelativeToolTip": "dominio\\Elemento.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T12:26:15.229Z"
+              "WhenOpened": "2025-10-20T12:26:15.229Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FrmPokemons.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\WindformApp\\FrmPokemons.cs",
               "RelativeDocumentMoniker": "WindformApp\\FrmPokemons.cs",
               "ToolTip": "C:\\Users\\Laureano\\OneDrive\\Documentos\\Curso C# Nivel2\\ConexionesBD\\App_Pokemons\\WindformApp\\WindformApp\\FrmPokemons.cs [Design]",
               "RelativeToolTip": "WindformApp\\FrmPokemons.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T12:19:51.83Z"
+              "WhenOpened": "2025-10-20T12:19:51.83Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
