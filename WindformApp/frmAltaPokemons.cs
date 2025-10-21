@@ -35,11 +35,29 @@ namespace WindformApp
                 poke.Numero =int.Parse(txtNumero.Text);
                 poke.Nombre =txtNombre.Text;
                 poke.Descripcion = txtDescripcion.Text;
+                poke.Tipo = (Elemento)cbxTipo.SelectedItem;
+                poke.Debilidad =(Elemento) cbxDebilidad.SelectedItem;
 
                 negocio.agregar(poke);
                 MessageBox.Show("Agregado existosamente");
                 Close();
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void frmAltaPokemons_Load(object sender, EventArgs e)
+        {
+            ElementoNegocios elementoNegocio = new ElementoNegocios();
+
+            try
+            {
+                cbxTipo.DataSource = elementoNegocio.listar();
+                cbxDebilidad.DataSource = elementoNegocio.listar();
             }
             catch (Exception ex)
             {
