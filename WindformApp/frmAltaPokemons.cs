@@ -1,4 +1,6 @@
 ﻿using dominio;
+using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,8 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using dominio;
-using negocio;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindformApp
 {
@@ -35,6 +36,7 @@ namespace WindformApp
                 poke.Numero =int.Parse(txtNumero.Text);
                 poke.Nombre =txtNombre.Text;
                 poke.Descripcion = txtDescripcion.Text;
+                poke.UrlImagen = txtUrlImagen.Text;
                 poke.Tipo = (Elemento)cbxTipo.SelectedItem;
                 poke.Debilidad =(Elemento) cbxDebilidad.SelectedItem;
 
@@ -52,18 +54,38 @@ namespace WindformApp
 
         private void frmAltaPokemons_Load(object sender, EventArgs e)
         {
+            
             ElementoNegocios elementoNegocio = new ElementoNegocios();
-
             try
             {
                 cbxTipo.DataSource = elementoNegocio.listar();
                 cbxDebilidad.DataSource = elementoNegocio.listar();
             }
             catch (Exception ex)
-            {
-
+            { 
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void txtUrlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtUrlImagen.Text);
+        }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxPokemon.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pbxPokemon.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
+        }
+
+
+
+
     }
 }
