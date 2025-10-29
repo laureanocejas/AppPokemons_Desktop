@@ -110,6 +110,7 @@ namespace WindformApp
                     seleccionado = (Pokemons)dgvPokemons.CurrentRow.DataBoundItem;
                     if (logico)
                         negocio.eliminarLogico(seleccionado.Id);
+                    //sino elimina fisico
                     else
                         negocio.eliminar(seleccionado.Id);
                     cargar();
@@ -121,6 +122,15 @@ namespace WindformApp
 
                 MessageBox.Show(ex.ToString());
             }
+
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            List<Pokemons> listaFiltrada;//creo una lista sin instancia 
+            listaFiltrada = listaPokemons.FindAll(x=>x.Nombre==txtFiltro.Text);//porque esto devuelve una lista
+            dgvPokemons.DataSource = null;//limpio
+            dgvPokemons.DataSource = listaFiltrada;//actualizo el dgv
 
         }
     }
