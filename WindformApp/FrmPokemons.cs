@@ -88,16 +88,30 @@ namespace WindformApp
 
         private void btnEliminarFisico_Click(object sender, EventArgs e)
         {
-            PokemonNegocios negocio=new PokemonNegocios();
+            eliminar();
+           
+        }
+
+        private void btnEliminarLogico_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+
+        private void eliminar(bool logico=false)
+        {
+            PokemonNegocios negocio = new PokemonNegocios();
             Pokemons seleccionado;
 
             try
             {
-                DialogResult respuesta= MessageBox.Show("de verdad desea eliminarlo?","Eliminando",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("de verdad desea eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Pokemons)dgvPokemons.CurrentRow.DataBoundItem;
-                    negocio.eliminar(seleccionado.Id);
+                    if (logico)
+                        negocio.eliminarLogico(seleccionado.Id);
+                    else
+                        negocio.eliminar(seleccionado.Id);
                     cargar();
                 }
 
@@ -105,8 +119,9 @@ namespace WindformApp
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.ToString()); 
+                MessageBox.Show(ex.ToString());
             }
+
         }
     }
 }
