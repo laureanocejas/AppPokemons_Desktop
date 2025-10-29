@@ -26,9 +26,13 @@ namespace WindformApp
         }
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
         {
-            Pokemons seleccionado = (Pokemons)dgvPokemons.CurrentRow.DataBoundItem;
-            //pbxPokemon.Load(seleccionado.UrlImagen); esto me tira una excepcion si la columna esta vacia de url y no tiene imagen
-            cargarImagen(seleccionado.UrlImagen);
+            if(dgvPokemons.CurrentRow != null)
+            {
+                Pokemons seleccionado = (Pokemons)dgvPokemons.CurrentRow.DataBoundItem;
+                //pbxPokemon.Load(seleccionado.UrlImagen); esto me tira una excepcion si la columna esta vacia de url y no tiene imagen
+                cargarImagen(seleccionado.UrlImagen);
+            }
+            
 
         }
 
@@ -42,9 +46,7 @@ namespace WindformApp
             {
                 listaPokemons = negocio.Listar();
                 dgvPokemons.DataSource = listaPokemons;
-                dgvPokemons.Columns["UrlImagen"].Visible = false;
-                dgvPokemons.Columns["Id"].Visible = false;
-
+                ocultarColumnas();
                 cargarImagen(listaPokemons[0].UrlImagen);
             }
             catch (Exception ex)
@@ -54,6 +56,12 @@ namespace WindformApp
             }
 
         }
+        private void ocultarColumnas()
+        {
+            dgvPokemons.Columns["UrlImagen"].Visible = false;
+            dgvPokemons.Columns["Id"].Visible = false;
+        }
+
  
         private void cargarImagen(string imagen)
         {
@@ -127,10 +135,49 @@ namespace WindformApp
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
+            //List<Pokemons> listaFiltrada;//creo una lista sin instancia 
+            //string filtro = txtFiltro.Text;
+
+            //if(filtro!="")
+            //{
+            //    //busca por igualdad ==
+            //   // listaFiltrada = listaPokemons.FindAll(x => x.Nombre.ToUpper() == filtro.ToUpper());//porque esto devuelve una lista
+            //    //busca por concidencia contains
+            //    listaFiltrada = listaPokemons.FindAll(x => x.Nombre.ToUpper().Contains (filtro.ToUpper()) || x.Tipo.Descripcion.ToUpper().Contains(filtro.ToUpper()));//porque esto devuelve una lista
+
+            //}
+            //else
+            //{
+            //    listaFiltrada = listaPokemons;
+            //}
+
+            //dgvPokemons.DataSource = null;//limpio
+            //dgvPokemons.DataSource = listaFiltrada;//actualizo el dgv
+            //ocultarColumnas();
+
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
             List<Pokemons> listaFiltrada;//creo una lista sin instancia 
-            listaFiltrada = listaPokemons.FindAll(x=>x.Nombre==txtFiltro.Text);//porque esto devuelve una lista
+            string filtro = txtFiltro.Text;
+
+            if (filtro.Length<3)
+            {
+                //busca por igualdad ==
+                // listaFiltrada = listaPokemons.FindAll(x => x.Nombre.ToUpper() == filtro.ToUpper());//porque esto devuelve una lista
+                //busca por concidencia contains
+                listaFiltrada = listaPokemons.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Tipo.Descripcion.ToUpper().Contains(filtro.ToUpper()));//porque esto devuelve una lista
+
+            }
+            else
+            {
+                listaFiltrada = listaPokemons;
+            }
+
             dgvPokemons.DataSource = null;//limpio
             dgvPokemons.DataSource = listaFiltrada;//actualizo el dgv
+            ocultarColumnas();
 
         }
     }
