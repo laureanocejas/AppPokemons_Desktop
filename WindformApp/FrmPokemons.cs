@@ -43,6 +43,8 @@ namespace WindformApp
                 listaPokemons = negocio.Listar();
                 dgvPokemons.DataSource = listaPokemons;
                 dgvPokemons.Columns["UrlImagen"].Visible = false;
+                dgvPokemons.Columns["Id"].Visible = false;
+
                 cargarImagen(listaPokemons[0].UrlImagen);
             }
             catch (Exception ex)
@@ -71,6 +73,17 @@ namespace WindformApp
             frmAltaPokemons alta=new frmAltaPokemons();
             alta.ShowDialog();
             cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Pokemons seleccionado;
+            seleccionado = (Pokemons)dgvPokemons.CurrentRow.DataBoundItem;
+            
+            frmAltaPokemons modificar = new frmAltaPokemons(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+
         }
     }
 }

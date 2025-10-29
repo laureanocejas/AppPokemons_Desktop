@@ -24,7 +24,7 @@ public class PokemonNegocios
             //comando.CommandText = "Select Numero,Nombre,Descripcion From POKEMONS";
             //comando.CommandText= "Select Numero,Nombre,Descripcion,UrlImagen From POKEMONS";
             //comando.CommandText = "Select P.Numero,P.Nombre,P.Descripcion,P.UrlImagen, E.Descripcion as Tipo From POKEMONS P,ELEMENTOS E where P.IdTipo=E.Id;\r\n";
-            comando.CommandText = "Select P.Numero,P.Nombre,P.Descripcion,P.UrlImagen, E.Descripcion as Tipo,D.Descripcion as Debilidad From POKEMONS P, ELEMENTOS E,ELEMENTOS D where P.IdTipo = E.Id And P.IdDebilidad = D.Id";
+            comando.CommandText = "Select P.Numero,P.Nombre,P.Descripcion,P.UrlImagen, E.Descripcion as Tipo,D.Descripcion as Debilidad, P.IdTipo, P.IdDebilidad, P.Id From POKEMONS P, ELEMENTOS E,ELEMENTOS D where P.IdTipo = E.Id And P.IdDebilidad = D.Id";
 
             comando.Connection = conexion;
 
@@ -34,6 +34,7 @@ public class PokemonNegocios
             while (lector.Read())
             {
                     Pokemons aux = new Pokemons();
+                    aux.Id =(int)lector["Id"];
                     aux.Numero = lector.GetInt32(0);
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
@@ -42,8 +43,10 @@ public class PokemonNegocios
                         aux.UrlImagen = (string)lector["UrlImagen"];
 
                     aux.Tipo = new Elemento();
+                    aux.Tipo.Id = (int)lector["IdTipo"];
                     aux.Tipo.Descripcion = (string)lector["Tipo"];
                     aux.Debilidad = new Elemento();
+                    aux.Debilidad.Id = (int)lector["IdDebilidad"];
                     aux.Debilidad.Descripcion = (string)lector["Debilidad"];
 
                     lista.Add(aux);
@@ -83,8 +86,34 @@ public class PokemonNegocios
 
         }
 
-        public void modificar(Pokemons modificar)
+        public void modificar(Pokemons poke)
         {
+            AccesoDatos datos=new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update POKEMONS set Numero=@numero,Nombre=@nombre,Descripcion=@descripcion,UrlImagen=@img,IdTipo=@idTipo,IdDebilidad=@idDebilidad Where Id=@id;\r\n");
+                datos.setearParametro("@numero",poke.Numero);
+                datos.setearParametro("@nombre",poke.Nombre);
+                datos.setearParametro("@descripcion",poke.Descripcion);
+                datos.setearParametro("@img",poke.UrlImagen);
+                datos.setearParametro("@idTipo",poke.Tipo.Id);
+                datos.setearParametro("@idDebilidad",poke.Debilidad.Id);
+                datos.setearParametro("@id",poke.Id);
+
+                datos.ejecutarAccion();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex; 
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
         }
 

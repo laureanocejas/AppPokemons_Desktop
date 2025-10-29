@@ -16,9 +16,16 @@ namespace WindformApp
 {
     public partial class frmAltaPokemons : Form
     {
+        private Pokemons pokemon=null;
         public frmAltaPokemons()
         {
             InitializeComponent();
+        }
+        public frmAltaPokemons(Pokemons pokemon)
+        {
+            InitializeComponent();
+            this.pokemon= pokemon;
+            Text = "Modificiar Pokemon";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -28,20 +35,36 @@ namespace WindformApp
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Pokemons poke = new Pokemons();
+            //poke esta variable ya no me sirve mas porque ya tengo la variable pokemon
+            //Pokemons poke = new Pokemons();
             PokemonNegocios negocio = new PokemonNegocios();
 
             try
             {
-                poke.Numero =int.Parse(txtNumero.Text);
-                poke.Nombre =txtNombre.Text;
-                poke.Descripcion = txtDescripcion.Text;
-                poke.UrlImagen = txtUrlImagen.Text;
-                poke.Tipo = (Elemento)cbxTipo.SelectedItem;
-                poke.Debilidad =(Elemento) cbxDebilidad.SelectedItem;
+                //uso el atributo privado pokemon 
+                //si hago aceptar y el pokemon esta null yo quiero agregar un pokemon nuevo
+                //si no esta null quiere decir que hay un pokemons
+                if (pokemon == null)
+                    pokemon = new Pokemons();
 
-                negocio.agregar(poke);
-                MessageBox.Show("Agregado existosamente");
+                pokemon.Numero =int.Parse(txtNumero.Text);
+                pokemon.Nombre =txtNombre.Text;
+                pokemon.Descripcion = txtDescripcion.Text;
+                pokemon.UrlImagen = txtUrlImagen.Text;
+                pokemon.Tipo = (Elemento)cbxTipo.SelectedItem;
+                pokemon.Debilidad =(Elemento) cbxDebilidad.SelectedItem;
+
+                //como me doy cuenta si quiero ejecutar agregar o modificar
+                if (pokemon.Id != 0)
+                {
+                    negocio.modificar(pokemon);
+                    MessageBox.Show("modificado existosamente");
+                }
+                else
+                {
+                    negocio.agregar(pokemon);
+                    MessageBox.Show("agregado exitosamente");
+                } 
                 Close();
 
             }
@@ -59,7 +82,24 @@ namespace WindformApp
             try
             {
                 cbxTipo.DataSource = elementoNegocio.listar();
+                cbxTipo.ValueMember = "Id";
+                cbxTipo.DisplayMember = "Descripcion";
                 cbxDebilidad.DataSource = elementoNegocio.listar();
+                cbxDebilidad.ValueMember = "Id";
+                cbxDebilidad.DisplayMember = "Descripcion";
+
+                //validacion para saber si es un pokemon para modificar
+                if(pokemon !=null)
+                {
+                    txtNumero.Text = pokemon.Numero.ToString();
+                    txtNombre.Text = pokemon.Nombre;
+                    txtDescripcion.Text = pokemon.Descripcion;
+                    txtUrlImagen.Text = pokemon.UrlImagen;
+                    cargarImagen(pokemon.UrlImagen);
+                    cbxTipo.SelectedValue = pokemon.Tipo.Id;
+                    cbxDebilidad.SelectedValue = pokemon.Debilidad.Id;
+
+                }
             }
             catch (Exception ex)
             { 
