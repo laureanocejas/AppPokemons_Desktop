@@ -194,13 +194,13 @@ namespace negocio
                     switch (criterio)
                     {
                         case "comienza con ":
-                            consulta += "P.Descripcion '" + filtro + "%'";
+                            consulta += "P.Descripcion like '" + filtro + "%'";
                             break;
                         case "Termina con":
-                            consulta += "P.Descripcion' % " + filtro + "'";
+                            consulta += "P.Descripcion like ' % " + filtro + "'";
                             break;
                         default:
-                            consulta += "P.Descripcion'%" + filtro + "%'";
+                            consulta += "P.Descripcion like '%" + filtro + "%'";
                             break;
                     }
 

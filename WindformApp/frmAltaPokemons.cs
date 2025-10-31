@@ -4,9 +4,12 @@ using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +20,7 @@ namespace WindformApp
     public partial class frmAltaPokemons : Form
     {
         private Pokemons pokemon=null;
+        private OpenFileDialog archivo = null;
         public frmAltaPokemons()
         {
             InitializeComponent();
@@ -65,6 +69,12 @@ namespace WindformApp
                     negocio.agregar(pokemon);
                     MessageBox.Show("agregado exitosamente");
                 } 
+                //guardo imagen si la levanto localmente
+                if(archivo!=null && !(txtUrlImagen.Text.ToUpper().Contains("HTPP")))
+                {
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"]+archivo.SafeFileName);
+
+                }
                 Close();
 
             }
@@ -124,8 +134,26 @@ namespace WindformApp
             }
         }
 
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            //aca solamente levante la imagen
+            //OpenFileDialog archivo = new OpenFileDialog();
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg;|png|*.png";
+
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtUrlImagen.Text=archivo.FileName;
+                cargarImagen(archivo.FileName);
+
+                //guardar imagen
+                //guardar en la ruta pero no guarda el archivo
+                //mejorarlo y que lo guarde cuando haga aceptar
+                //File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"]+archivo.SafeFileName);
+            }
+        
 
 
-
+        }
     }
 }
