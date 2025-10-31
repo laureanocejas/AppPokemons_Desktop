@@ -7,34 +7,34 @@ using System.Data.SqlClient;
 using dominio;
 
 namespace negocio
-{ 
-public class PokemonNegocios
 {
-    public List<Pokemons> Listar()
+    public class PokemonNegocios
     {
-        List<Pokemons> lista = new List<Pokemons>();
-        SqlConnection conexion = new SqlConnection();
-        SqlCommand comando = new SqlCommand();
-        SqlDataReader lector;
-
-        try
+        public List<Pokemons> Listar()
         {
-            conexion.ConnectionString = "server=DESKTOP-PHQLRTP;database=POKEDEX_DB;integrated security=true";
-            comando.CommandType = System.Data.CommandType.Text;
-            //comando.CommandText = "Select Numero,Nombre,Descripcion From POKEMONS";
-            //comando.CommandText= "Select Numero,Nombre,Descripcion,UrlImagen From POKEMONS";
-            //comando.CommandText = "Select P.Numero,P.Nombre,P.Descripcion,P.UrlImagen, E.Descripcion as Tipo From POKEMONS P,ELEMENTOS E where P.IdTipo=E.Id;\r\n";
-            comando.CommandText = "Select P.Numero,P.Nombre,P.Descripcion,P.UrlImagen, E.Descripcion as Tipo,D.Descripcion as Debilidad, P.IdTipo, P.IdDebilidad, P.Id From POKEMONS P, ELEMENTOS E,ELEMENTOS D where P.IdTipo = E.Id And P.IdDebilidad = D.Id And P.Activo=1";
+            List<Pokemons> lista = new List<Pokemons>();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
 
-            comando.Connection = conexion;
-
-            conexion.Open();
-            lector = comando.ExecuteReader();
-
-            while (lector.Read())
+            try
             {
+                conexion.ConnectionString = "server=DESKTOP-PHQLRTP;database=POKEDEX_DB;integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                //comando.CommandText = "Select Numero,Nombre,Descripcion From POKEMONS";
+                //comando.CommandText= "Select Numero,Nombre,Descripcion,UrlImagen From POKEMONS";
+                //comando.CommandText = "Select P.Numero,P.Nombre,P.Descripcion,P.UrlImagen, E.Descripcion as Tipo From POKEMONS P,ELEMENTOS E where P.IdTipo=E.Id;\r\n";
+                comando.CommandText = "Select P.Numero,P.Nombre,P.Descripcion,P.UrlImagen, E.Descripcion as Tipo,D.Descripcion as Debilidad, P.IdTipo, P.IdDebilidad, P.Id From POKEMONS P, ELEMENTOS E,ELEMENTOS D where P.IdTipo = E.Id And P.IdDebilidad = D.Id And P.Activo=1";
+
+                comando.Connection = conexion;
+
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
                     Pokemons aux = new Pokemons();
-                    aux.Id =(int)lector["Id"];
+                    aux.Id = (int)lector["Id"];
                     aux.Numero = lector.GetInt32(0);
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
@@ -51,25 +51,25 @@ public class PokemonNegocios
 
                     lista.Add(aux);
 
+                }
+                conexion.Close();
+                return lista;
+
             }
-            conexion.Close();
-            return lista;
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
         }
-        catch (Exception ex)
-        {
-
-            throw ex;
-        }
-    }
         public void agregar(Pokemons nuevo)
         {
-            AccesoDatos datos=new AccesoDatos();
+            AccesoDatos datos = new AccesoDatos();
             try
             {
                 //datos.setearConsulta("Insert into POKEMONS(Numero,Nombre,Descripcion,Activo,IdTipo,IdDebilidad)values("+nuevo.Numero +", '"+nuevo.Nombre+"','"+nuevo.Descripcion+"',1,@idTipo,@idDebilidad)");
-                datos.setearConsulta("Insert into POKEMONS(Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad, UrlImagen)values("+nuevo.Numero +", '"+nuevo.Nombre+"', '"+nuevo.Descripcion+"', 1, @idTipo, @idDebilidad,@urlImagen)");
-                datos.setearParametro("@idTipo",nuevo.Tipo.Id);
+                datos.setearConsulta("Insert into POKEMONS(Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad, UrlImagen)values(" + nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1, @idTipo, @idDebilidad,@urlImagen)");
+                datos.setearParametro("@idTipo", nuevo.Tipo.Id);
                 datos.setearParametro("@idDebilidad", nuevo.Debilidad.Id);
                 datos.setearParametro("@urlImagen", nuevo.UrlImagen);
                 datos.ejecutarAccion();
@@ -88,17 +88,17 @@ public class PokemonNegocios
 
         public void modificar(Pokemons poke)
         {
-            AccesoDatos datos=new AccesoDatos();
+            AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta("update POKEMONS set Numero=@numero,Nombre=@nombre,Descripcion=@descripcion,UrlImagen=@img,IdTipo=@idTipo,IdDebilidad=@idDebilidad Where Id=@id;\r\n");
-                datos.setearParametro("@numero",poke.Numero);
-                datos.setearParametro("@nombre",poke.Nombre);
-                datos.setearParametro("@descripcion",poke.Descripcion);
-                datos.setearParametro("@img",poke.UrlImagen);
-                datos.setearParametro("@idTipo",poke.Tipo.Id);
-                datos.setearParametro("@idDebilidad",poke.Debilidad.Id);
-                datos.setearParametro("@id",poke.Id);
+                datos.setearParametro("@numero", poke.Numero);
+                datos.setearParametro("@nombre", poke.Nombre);
+                datos.setearParametro("@descripcion", poke.Descripcion);
+                datos.setearParametro("@img", poke.UrlImagen);
+                datos.setearParametro("@idTipo", poke.Tipo.Id);
+                datos.setearParametro("@idDebilidad", poke.Debilidad.Id);
+                datos.setearParametro("@id", poke.Id);
 
                 datos.ejecutarAccion();
 
@@ -108,7 +108,7 @@ public class PokemonNegocios
             catch (Exception ex)
             {
 
-                throw ex; 
+                throw ex;
             }
             finally
             {
@@ -130,7 +130,7 @@ public class PokemonNegocios
             catch (Exception ex)
             {
 
-                throw ex ;
+                throw ex;
             }
         }
         public void eliminarLogico(int id)
@@ -150,5 +150,95 @@ public class PokemonNegocios
 
         }
 
+        public List<Pokemons> filtrar(string campo, string criterio, string filtro)
+        {
+            List<Pokemons> lista = new List<Pokemons>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = "Select P.Numero,P.Nombre,P.Descripcion,P.UrlImagen, E.Descripcion as Tipo,D.Descripcion as Debilidad, P.IdTipo, P.IdDebilidad, P.Id From POKEMONS P, ELEMENTOS E,ELEMENTOS D where P.IdTipo = E.Id And P.IdDebilidad = D.Id And P.Activo=1 And ";
+                if (campo == "Numero")
+                {
+                    switch (criterio)
+                    {
+                        case "Mayor a ":
+                            consulta += "Numero>" + filtro;
+                            break;
+                        case "Menor a":
+                            consulta += "Numero<" + filtro;
+                            break;
+                        default:
+                            consulta += "Numero= " + filtro;
+                            break;
+                    }
+
+                }
+                else if (campo == "Nombre")
+                {
+                    switch (criterio)
+                    {
+                        case "comienza con ":
+                            consulta += "Nombre like '" + filtro + "%'";
+                            break;
+                        case "Termina con":
+                            consulta += "Nombre like ' % " + filtro + "'";
+                            break;
+                        default:
+                            consulta += "Nombre like'%" + filtro + "%'";
+                            break;
+                    }
+
+                }
+                else
+                {
+                    switch (criterio)
+                    {
+                        case "comienza con ":
+                            consulta += "P.Descripcion '" + filtro + "%'";
+                            break;
+                        case "Termina con":
+                            consulta += "P.Descripcion' % " + filtro + "'";
+                            break;
+                        default:
+                            consulta += "P.Descripcion'%" + filtro + "%'";
+                            break;
+                    }
+
+                }
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+               
+
+                while (datos.Lector.Read())
+                {
+                    Pokemons aux = new Pokemons();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Numero = datos.Lector.GetInt32(0);
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    if (!(datos.Lector["UrlImagen"] is DBNull))
+                        aux.UrlImagen = (string)datos.Lector["UrlImagen"];
+
+                    aux.Tipo = new Elemento();
+                    aux.Tipo.Id = (int)datos.Lector["IdTipo"];
+                    aux.Tipo.Descripcion = (string)datos.Lector["Tipo"];
+                    aux.Debilidad = new Elemento();
+                    aux.Debilidad.Id = (int)datos.Lector["IdDebilidad"];
+                    aux.Debilidad.Descripcion = (string)datos.Lector["Debilidad"];
+
+                    lista.Add(aux);
+
+                }
+                return lista;
+
+            
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+}
     }
 }

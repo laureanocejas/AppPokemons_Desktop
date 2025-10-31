@@ -23,6 +23,11 @@ namespace WindformApp
         private void FrmPokemons_Load(object sender, EventArgs e)
         {
             cargar();
+            cbxCampo.Items.Add("Numero");
+            cbxCampo.Items.Add("Nombre");
+            cbxCampo.Items.Add("Descripcion");
+
+
         }
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
         {
@@ -135,6 +140,20 @@ namespace WindformApp
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
+            PokemonNegocios negocio = new PokemonNegocios();
+            try
+            {
+                string campo = cbxCampo.SelectedItem.ToString();
+                string criterio = cbxCirterio.SelectedItem.ToString();
+                string filtro = cbxFiltroAvanzado.Text;
+                dgvPokemons.DataSource = negocio.filtrar(campo, criterio, filtro);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
             //List<Pokemons> listaFiltrada;//creo una lista sin instancia 
             //string filtro = txtFiltro.Text;
 
@@ -179,6 +198,25 @@ namespace WindformApp
             dgvPokemons.DataSource = listaFiltrada;//actualizo el dgv
             ocultarColumnas();
 
+        }
+
+        private void cbxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cbxCampo.SelectedItem.ToString();
+            if(opcion=="Numero")
+            {
+                cbxCirterio.Items.Clear();
+                cbxCirterio.Items.Add("Mayor a");
+                cbxCirterio.Items.Add("Menor a");
+                cbxCirterio.Items.Add("Igual a");
+            }
+            else
+            {
+                cbxCirterio.Items.Clear();
+                cbxCirterio.Items.Add("comienza con ");
+                cbxCirterio.Items.Add("termina con ");
+                cbxCirterio.Items.Add("contiene ");
+            }
         }
     }
 }
